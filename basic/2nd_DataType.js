@@ -1,0 +1,15 @@
+let a = "Akash";
+let b = true;
+let c = 2;
+let d ;
+null;
+console.log(a);
+console.log(typeof a);
+console.log(b);
+console.log(typeof b);
+console.log(c);
+console.log(typeof c);
+console.log(d);
+console.log(typeof d);
+console.log(null);
+console.log(typeof null);
