@@ -20,3 +20,26 @@ let fun = function(){
 }
 console.log("hello");
 fun();
+console.log(typeof arr);
+console.log(typeof fun);
+console.log(typeof obj);
+console.log(typeof a);
+console.log(typeof sym1);
+
+// stack(primitives) and heap(non-primitives)
+
+let myname ="Akash";
+let myname2 = myname;
+myname2 = "Raj";
+console.log(myname);
+console.log(myname2);
+console.log(myname);
+let obje ={
+    name:"Krishna",
+    email:"kri@gmail.com"
+}
+let obj1 =obje;
+console.log(obje.email);
+obj1.email="Node@gmail.com";
+console.log(obje.email);
+console.log(obj1.email);
