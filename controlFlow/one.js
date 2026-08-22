@@ -1,8 +1,10 @@
 const a = 20;
 if(a<20){
     console.log("Data is corrct");
+}else if(a==0){
+    console.log("Data is inconsistant");
 }else{
-    console.log("Data is inconsistant")
+    console.log("Data is found");
 }
 const havecard = true;
 const productadded = true;
