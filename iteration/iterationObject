@@ -1,0 +1,15 @@
+// const obj ={
+//     name : "Akash",
+//     rollno : 13,
+//     branch : "cs-ai",
+//     phone : 6960094788
+// }
+// for(const key in obj){
+//     console.log(key +"->"+ obj[key]);
+// }
+
+// let arr=[123,45,33,234,7,554,2];
+
+// for (const key in arr) {
+//     console.log(key+' =>'+arr[key]);
+// }
