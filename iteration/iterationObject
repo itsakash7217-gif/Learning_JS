@@ -8,8 +8,18 @@
 //     console.log(key +"->"+ obj[key]);
 // }
 
-// let arr=[123,45,33,234,7,554,2];
+let arr=[123,45,33,234,7,554,2];
 
 // for (const key in arr) {
 //     console.log(key+' =>'+arr[key]);
 // }
+
+// function printme(item){
+//     console.log(item);
+// }
+// arr.forEach(printme);
+
+
+// arr.forEach((item,index,ar)=>{
+//     console.log(item,index,ar);
+// })
