@@ -1,19 +1,30 @@
-const a = 20;
-if(a<20){
-    console.log("Data is corrct");
-}else if(a==0){
-    console.log("Data is inconsistant");
-}else{
-    console.log("Data is found");
-}
-const havecard = true;
-const productadded = true;
-const loginwithgoogle = true;
-const loginwithemail = true;
+// const a = 20;
+// if(a<20){
+//     console.log("Data is corrct");
+// }else if(a==0){
+//     console.log("Data is inconsistant");
+// }else{
+//     console.log("Data is found");
+// }
+// const havecard = true;
+// const productadded = true;
+// const loginwithgoogle = true;
+// const loginwithemail = true;
 
-if(havecard && productadded){
-    console.log("Payment is successfully done");
-}
-if(loginwithemail || loginwithgoogle){
-    console.log("User is login completely")
-}
+// if(havecard && productadded){
+//     console.log("Payment is successfully done");
+// }
+// if(loginwithemail || loginwithgoogle){
+//     console.log("User is login completely")
+// }
+
+// nullish coalescing ??
+// let a;
+// a = null ?? 10;
+
+// console.log(a); // 10
+
+
+// let a;
+// a = null ? 10 : 20;
+// console.log(a);
