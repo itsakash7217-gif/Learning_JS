@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Check Append With 2 ways</h1>
+
+            <div class="col-12">
+            </div>
+        </div>
+    </div>
+    <script>
+        // document.addEventListener("DOMContentLoaded",function(){
+            const span = document.createElement("span");
+            span.textContent = "Hello World";
+            document.querySelector(".col-12").appendChild(span);
+            // This will create a span element with the text "Hello World" and append it to the div with class "col-12".
+            const span1 = document.createElement("span");
+            const textNode = document.createTextNode("with not taking extra space");
+            span1.appendChild(textNode);
+            document.querySelector(".col-12").appendChild(span1);
+            // This will create a span element, create a text node with the text "with not taking extra space", append the text node to the span, and then append the span to the div with class "col-12".
+            //  this last one is optimizes not require to traverse in tree to append childnode to span and then append span to div. It will directly append textnode to div.
+            // })
+    </script>
+</body>
+</html>

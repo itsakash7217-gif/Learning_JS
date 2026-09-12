@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list-group">
+        <li class="li">Java</li>
+    </ul>
+    <button class="button">Add Skill</button>
+    <button class="change">change skill</button>
+    <button class="delete">Delete Skill</button>
+    <script>
+        const skills = [
+  "Java",
+  "JavaScript",
+  "SQL",
+  "HTML",
+  "CSS",
+  "Python",
+  "Cloud Computing",
+  "DevOps",
+  "Machine Learning",
+  "Data Structures & Algorithms"
+];
+const button = document.querySelector(".button");
+button.addEventListener("click", function() {
+    const li= document.createElement("li");
+    const add = document.createTextNode(skills[Math.floor(Math.random()*skills.length)]);
+    li.appendChild(add);
+    document.querySelector(".list-group").appendChild(li);
+});
+const change = document.querySelector(".change");
+change.addEventListener("click", function() {
+    
+    let l = Math.floor(Math.random()*document.querySelectorAll(".list-group li").length);
+    const li = document.querySelector(`.list-group li:nth-child(${l})`);
+    const newSkill = skills[Math.floor(Math.random()*skills.length)];
+    const ll = document.createElement("li");
+    ll.appendChild(document.createTextNode(newSkill));
+    li.replaceWith(ll);
+}); 
+const deleteButton = document.querySelector(".delete");
+deleteButton.addEventListener("click", function() {
+    let l = Math.floor(Math.random()*document.querySelectorAll(".list-group li").length
+);
+    const li = document.querySelector(`.list-group li:nth-child(${l})`);
+    li.remove();
+});
+    </script>
+</body>
+</html>
