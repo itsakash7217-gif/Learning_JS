@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1>Changing color is on going .It can only constrol by your action....</h1>
+    <button class="stop">stop</button>
+    <button class="start">start</button>
+    <h1 class="data"></h1>
+    <script>
+        let body = document.querySelector("#body");
+        function color(){
+            const a = Math.random()*225;
+            const b = Math.random()*225;
+            const c = Math.random()*225;
+             let change = body.style.backgroundColor=`rgb(${a} ${b} ${c})`;
+            return change;
+        }
+        let a ;
+        const start = document.querySelector(".start");
+        const stop = document.querySelector(".stop");
+        start.addEventListener("click",function(){
+            a = setInterval(color,1000);
+            console.log("Changing is working...");
+            start.disabled=true;
+            stop.disabled=false;
+        })
+        stop.addEventListener("click",function(){
+            clearInterval(a);
+            console.log("Changing is now stop...")
+            start.disabled=false;
+            stop.disabled=true;
+            
+        })
+    </script>
+</body>
+</html>
