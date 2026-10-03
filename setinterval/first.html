@@ -13,23 +13,25 @@
     <script>
         let body = document.querySelector("#body");
         function color(){
-            const a = Math.random()*225;
-            const b = Math.random()*225;
-            const c = Math.random()*225;
-             let change = body.style.backgroundColor=`rgb(${a} ${b} ${c})`;
-            return change;
+            const a = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            const c = Math.floor(Math.random() * 256);
+            body.style.backgroundColor = `rgb(${a}, ${b}, ${c})`;
         }
         let a ;
         const start = document.querySelector(".start");
         const stop = document.querySelector(".stop");
         start.addEventListener("click",function(){
-            a = setInterval(color,1000);
+            if(!a){
+            a = setInterval(color,500);
+            }
             console.log("Changing is working...");
             start.disabled=true;
             stop.disabled=false;
         })
         stop.addEventListener("click",function(){
             clearInterval(a);
+            a=null;
             console.log("Changing is now stop...")
             start.disabled=false;
             stop.disabled=true;

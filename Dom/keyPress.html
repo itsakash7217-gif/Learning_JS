@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>what_ever_key_press</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="head">Use yout keyword</h1>
+        <div class="table">
+
+        </div>
+        <ui class="list">
+        </ui>
+    </div>
+    
+    <script>
+        const table = document.querySelector(".table");
+        const key = document.querySelector(".list");
+        document.addEventListener("keydown",function(event){
+            console.log(event.key);
+            table.innerHTML=`
+            <table>
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${event.key===" " ? "Space key" : event.key}</td>
+    <td>${event.keyCode 4}</td>
+    <td>${event.code}</td>
+  </tr>
+
+</table>
+            `
+            // const k = event.key;
+            // const li = document.createElement("li");
+            // li.textContent=k;
+            // key.appendChild(li);
+
+        })
+    </script>
+</body>
+</html>
