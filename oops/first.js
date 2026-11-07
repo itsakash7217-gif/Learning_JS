@@ -7,8 +7,7 @@
 // }
 // console.log(check.name);
 
-// function
-
+// function 
 function check(name,age,liking){
     this.name=name;
     this.age=age;
